@@ -32,8 +32,8 @@ for ((i=1; i<=2; i++))
 new_year=$(date +'%Y')
 let new_year++
 tput setaf 1; tput bold
-tput cup $lin $((c - 9)); echo РЎС‡Р°СЃС‚Р»РёРІРѕРіРѕ Р РѕР¶РґРµСЃС‚РІР° 
-tput cup $((lin + 1)) $((c - 6)); echo Р РјРЅРѕРіРѕ РљРћР”Рђ РІ $new_year
+tput cup $lin $((c - 5)); echo С РОЖДЕСТВОМ 
+tput cup $((lin + 1)) $((c - 8)); echo И много КОДА в $new_year
 let c++
 k=1
 
@@ -54,11 +54,11 @@ while true; do
         tput cup $li $co
         echo o
         line[$k$i]=$li
-        column[$k$i]=$co
+        column[$k$i]=$c
         color=$(((color+1)%6))
         # Flashing text
         sh=1
-        for l in Рљ Рћ Р” Рђ 
+        for l in К О Д А
         do
             tput cup $((lin+1)) $((c+sh))
             echo $l
